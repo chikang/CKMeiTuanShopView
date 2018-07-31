@@ -1,0 +1,156 @@
+
+{
+    activityList =     (
+                        {
+                        activeEndTime = "2019-08-31 16:13:00.0";
+                        activeId = 73;
+                        activeStartTime = "2018-07-31 16:13:00.0";
+                        activeTitle = "\U4f18\U60e0\U5238\U6d3b\U52a8";
+                        activeType = 3;
+                        isPlantActive = 2;
+                        },
+                        {
+                        activeEndTime = "2020-08-28 16:16:00.0";
+                        activeId = 39;
+                        activeStartTime = "2018-07-31 16:16:00.0";
+                        activeTitle = "\U6ee120\U51cf5;\U6ee160\U51cf30";
+                        activeType = 2;
+                        isPlantActive = 2;
+                        },
+                        {
+                        activeEndTime = "2021-08-31 16:50:00.0";
+                        activeId = 43;
+                        activeStartTime = "2018-07-31 16:12:00.0";
+                        activeTitle = "\U6298\U6263\U5546\U54c15\U6298\U8d77";
+                        activeType = 1;
+                        isPlantActive = 2;
+                        }
+                        );
+    commCount = 0;
+    commScore = "0.0";
+    commendedCount = 0;
+    count = 1;
+    couponList =     (
+                      {
+                      activeId = 73;
+                      couponCondition = 20;
+                      couponEndTime = "2019-08-31 16:13:00";
+                      couponId = 147;
+                      couponPrice = 5;
+                      couponStartTime = "2018-07-31 16:13:00";
+                      couponTime = "2019-08-31 16:13:00";
+                      couponTitle = "\U6ee120\U51cf5";
+                      isPlatForm = 2;
+                      },
+                      {
+                      activeId = 73;
+                      couponCondition = 60;
+                      couponEndTime = "2019-08-31 16:13:00";
+                      couponId = 149;
+                      couponPrice = 30;
+                      couponStartTime = "2018-07-31 16:13:00";
+                      couponTime = "2019-08-31 16:13:00";
+                      couponTitle = "\U6ee160\U51cf30";
+                      isPlatForm = 2;
+                      }
+                      );
+    isCollection = 0;
+    isStyle = 1;
+    item =     (
+    );
+    normalCount = 0;
+    openHour = "00:00 - 23:00";
+    picUrl = "http://www.apppark.net/app_1/upload/10436951/20180731160140_851.jpg";
+    recommendedCount = 0;
+    retFlag = 1;
+    retMsg = "\U83b7\U53d6\U4ea7\U54c1\U4fe1\U606f\U6210\U529f";
+    serviceOpenState = 0;
+    shopAddress = "\U6df1\U5733\U5e02\U5357\U5c71\U533a\U6df1\U5733\U817e\U8baf\U6ee8\U6d77\U5927\U53a6";
+    shopIcon = "http://www.apppark.net/app_1/upload/10436951/20180731160108_47.jpg";
+    shopIntroduce = "\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd\U8fd9\U662f\U5e97\U94fa\U4ecb\U7ecd";
+    shopLocation = "113.941868,22.528408";
+    shopName = "\U5fc5\U80dc\U5ba2\U5b85\U6025\U9001\Uff08\U524d\U8fdb\U5e97\Uff09";
+    shopNotice = "\U6b22\U8fce\U5149\U4e34\U5fc5\U80dc\U5ba2\U5b85\U6025\U9001\Uff0c\U6211\U4eec\U5c06\U7aed\U529b\U4e3a\U60a8\U63d0\U4f9b\U4e30\U5bcc\U7684\U7f8e\U98df\U3002";
+    shopPicList =     (
+                       {
+                       picUrl = "http://www.apppark.net/app_1/upload/10436951/20180731160511_17.jpg";
+                       },
+                       {
+                       picUrl = "http://www.apppark.net/app_1/upload/10436951/20180731160513_118.jpg";
+                       },
+                       {
+                       picUrl = "http://www.apppark.net/app_1/upload/10436951/20180731160516_455.jpg";
+                       },
+                       {
+                       picUrl = "http://www.apppark.net/app_1/upload/10436951/20180731160519_757.jpg";
+                       },
+                       {
+                       picUrl = "http://www.apppark.net/app_1/upload/10436951/20180731160522_780.jpg";
+                       },
+                       {
+                       picUrl = "http://www.apppark.net/app_1/upload/10436951/20180731160524_984.jpg";
+                       },
+                       {
+                       picUrl = "http://www.apppark.net/app_1/upload/10436951/20180731160528_34.jpg";
+                       },
+                       {
+                       picUrl = "http://www.apppark.net/app_1/upload/10436951/20180731160531_132.jpg";
+                       }
+                       );
+    shopType = 1;
+    sortInfo =     (
+                    {
+                    id = 815;
+                    name = "\U590f\U65e5\U69b4\U83b2\U5b63";
+                    },
+                    {
+                    id = 835;
+                    name = "\U725b\U6392";
+                    },
+                    {
+                    id = 833;
+                    name = "\U5976\U8336";
+                    },
+                    {
+                    id = 831;
+                    name = "\U65e9\U9910\U5957\U9910";
+                    },
+                    {
+                    id = 829;
+                    name = "\U996e\U6599";
+                    },
+                    {
+                    id = 827;
+                    name = "\U6c64";
+                    },
+                    {
+                    id = 825;
+                    name = "\U5c0f\U98df";
+                    },
+                    {
+                    id = 823;
+                    name = "\U9762/\U996d";
+                    },
+                    {
+                    id = 821;
+                    name = "\U610f\U5f0f\U62ab\U8428";
+                    },
+                    {
+                    id = 819;
+                    name = "\U7ecf\U5178\U94c1\U76d8\U6bd4\U8428";
+                    },
+                    {
+                    id = 817;
+                    name = "\U7687\U51a0\U829d\U5fc3\U62ab\U8428";
+                    },
+                    {
+                    id = 837;
+                    name = "\U70b8\U9e21";
+                    }
+                    );
+    "style_groupInfoShow" = 0;
+    "style_tabPosition" = 1;
+    "sys_moduleType" = 1;
+    telnumber = 18333333333;
+    unsatisfyCount = 0;
+    }

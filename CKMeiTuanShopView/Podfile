@@ -1,0 +1,11 @@
+platform:ios, '8.0'
+target 'CKMeiTuanShopView' do
+
+pod 'SDWebImage', '~> 4.0'
+pod 'IQKeyboardManager'
+pod 'Masonry' #屏幕适配
+pod 'MBProgressHUD' #提示框
+pod 'AFNetworking', '~> 3.0'
+pod 'JSONModel'
+pod 'MJRefresh'
+end
