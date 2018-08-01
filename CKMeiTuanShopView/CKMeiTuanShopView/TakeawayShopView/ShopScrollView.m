@@ -79,7 +79,7 @@ static CGFloat rubberBandDistance(CGFloat offset, CGFloat dimension) {
         //创建上下滑动的scrollview
         [self addSubview:self.subScrollView];
 #warning mark - 在这里暂时改变商家主页样式
-        self.shopViewType = 1;//
+        self.shopViewType = 2;//
         [self.subScrollView addSubview:self.shopHomePageView];//店铺主页
         [self.subScrollView addSubview:self.shopEvaluateView];//评价
         [self.subScrollView addSubview:self.merchantView];//商家

@@ -745,14 +745,15 @@
     //推荐回调
     if (index == 0) {
         //购物车
-       
+        NSLog(@"购物车");
     }else{
         //消息中心
-      
+        NSLog(@"消息中心");
     }
 }
 
 -(void)shopCartBtn{
+    
 }
 
 - (void)ybPopupMenuBeganDismiss
@@ -792,7 +793,7 @@
     if (_alpha < 0) {
         _alpha = 0;
     }
-//    CGFloat alpha2 = MIN(1, fabs((offsetY - _startChange_Y)/(_maxOffset_Y - _startChange_Y)));
+    
     CGFloat alpha2 = 0;
     if (_alpha >= 0.6) {
         alpha2 = (_alpha - 0.6)/0.4;
