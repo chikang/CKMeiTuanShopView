@@ -235,12 +235,7 @@
 
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    if (section == 10) {
-       return  UIEdgeInsetsMake(0,10,49+30,10);
-    }else{
-       return  UIEdgeInsetsMake(0,10,0,10);
-    }
-    
+   return  UIEdgeInsetsMake(0,10,0,10);
 }
 //选中cell
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -260,7 +255,7 @@
     if (tableView == self.leftTabView) {
         return 1;
     }
-    return 11;
+    return _titlesAry.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -280,13 +275,7 @@
         if (self.shopModuleType == ShopModuleTypeCard){
             return 110 + 4*(takeawayRight_W-20)/7;
         }else{
-            
-//            CGSize size = [AppMethods sizeWithFont:kFont(12) Str:model.title  withMaxWidth:takeawayRight_W - 110];
-//            if (size.height > 20) {
-//                return 120;
-//            }else{
-                return 100;
-//            }
+            return 100;
         }
     }
 }
@@ -303,15 +292,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     //最后一个
-    if (tableView == _leftTabView) {
-        return 30 + 49;
-    }else{
-        if (section == 10) {
-            return 30 + 49;
-        }else{
-            return 0.01;
-        }
-    }
+   return 0.01;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -335,7 +316,7 @@
         [bgView addSubview:line];
         
         UILabel *titleLab = [UITool createLabelWithFrame:CGRectMake(line.maxX+7,0, 200, 34) backgroundColor:[UIColor clearColor] textColor:kColor_GrayColor textSize:12 alignment:NSTextAlignmentLeft lines:1];
-        NSDictionary *dic = _titlesAry[_leftIndex];
+        NSDictionary *dic = _titlesAry[section];
         titleLab.text = dic[@"name"];
         [bgView addSubview:titleLab];
         

@@ -52,6 +52,7 @@
 		5CAE139D21101060003EAC76 /* ToolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE139C21101060003EAC76 /* ToolManager.m */; };
 		5CAE13A021101197003EAC76 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE139F21101197003EAC76 /* NSDate+Utilities.m */; };
 		5CAE13A5211056F5003EAC76 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CAE13A4211056F4003EAC76 /* shop.json */; };
+		5CAE13A7211166A2003EAC76 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CAE13A6211166A2003EAC76 /* food.png */; };
 		98CF9291DA1DBEE3213D043C /* libPods-CKMeiTuanShopView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E15BCFEB869C01F49E7A73A6 /* libPods-CKMeiTuanShopView.a */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +168,7 @@
 		5CAE139E21101196003EAC76 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		5CAE139F21101197003EAC76 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		5CAE13A4211056F4003EAC76 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
+		5CAE13A6211166A2003EAC76 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 		8B4BBC87A982D7A9BDCB7D1F /* Pods-CKMeiTuanShopView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKMeiTuanShopView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CKMeiTuanShopView/Pods-CKMeiTuanShopView.debug.xcconfig"; sourceTree = "<group>"; };
 		E15BCFEB869C01F49E7A73A6 /* libPods-CKMeiTuanShopView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CKMeiTuanShopView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -306,6 +308,7 @@
 		5CAE132D210FFDC1003EAC76 /* Supporting Flies */ = {
 			isa = PBXGroup;
 			children = (
+				5CAE13A6211166A2003EAC76 /* food.png */,
 				5CAE13A4211056F4003EAC76 /* shop.json */,
 				5CAE132E210FFDC1003EAC76 /* CKPrefixHeader.pch */,
 				5CAE132F210FFDC1003EAC76 /* Assets.xcassets */,
@@ -549,6 +552,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CAE13A5211056F5003EAC76 /* shop.json in Resources */,
+				5CAE13A7211166A2003EAC76 /* food.png in Resources */,
 				5CAE1335210FFDC1003EAC76 /* Assets.xcassets in Resources */,
 				5CAE1337210FFDC1003EAC76 /* Main.storyboard in Resources */,
 				5CAE13542110007B003EAC76 /* CustomTestCell.xib in Resources */,

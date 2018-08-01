@@ -117,12 +117,6 @@
  
         }
             break;
-        case 3:
-        {
-            //联系客服
-    
-        }
-            break;
         case 2:
         {
             //必须先登录
@@ -130,20 +124,20 @@
 
         }
             break;
-//        case 4:
-//        {
-//            [YBPopupMenu showRelyOnView:btn titles:TITLES icons:ICONS menuWidth:100 otherSettings:^(YBPopupMenu *popupMenu) {
-//                popupMenu.cornerRadius = 2;
-//                popupMenu.fontSize = 12;
-//                popupMenu.textColor = kColor_GrayColor;
-//                popupMenu.arrowWidth = 10;
-//                popupMenu.arrowHeight = 7;
-//                popupMenu.itemHeight = 34;
-//                popupMenu.delegate = self;
-//                popupMenu.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-//            }];
-//        }
-//            break;
+        case 3:
+        {
+            [YBPopupMenu showRelyOnView:btn titles:TITLES icons:ICONS menuWidth:100 otherSettings:^(YBPopupMenu *popupMenu) {
+                popupMenu.cornerRadius = 2;
+                popupMenu.fontSize = 12;
+                popupMenu.textColor = kColor_GrayColor;
+                popupMenu.arrowWidth = 10;
+                popupMenu.arrowHeight = 7;
+                popupMenu.itemHeight = 34;
+                popupMenu.delegate = self;
+                popupMenu.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+            }];
+        }
+            break;
         default:
             break;
     }

@@ -29,7 +29,7 @@
     _count = 0;
     _productImgView = [[UIImageView alloc] init];
     [self.contentView addSubview:_productImgView];
-    _productImgView.image = [UIImage imageNamed:@"img_135"];
+    _productImgView.image = [UIImage imageNamed:@"food"];
     [_productImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(0);
         make.top.mas_equalTo(0);
