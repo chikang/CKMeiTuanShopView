@@ -4,19 +4,21 @@
 
 
 
-![图片1](/Users/chikang/Desktop/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.44.png)
+![店铺商品](/Users/chikang/Desktop/CKMeiTuanShopView2/1.png)
+
+![店铺评价](/Users/chikang/Desktop/CKMeiTuanShopView2/2.png)
 
 
 
-![图片2](/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.23.png)
-
-![图片3](/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.19.png)
-
-![图片4](/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.16.png)
-
-![图片5](/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.27.37.png)
+![商家介绍](/Users/chikang/Desktop/CKMeiTuanShopView2/3.png)
 
 
+
+![店铺活动](/Users/chikang/Desktop/CKMeiTuanShopView2/4.png)
+
+
+
+![二级联动](/Users/chikang/Desktop/CKMeiTuanShopView2/5.png)
 
 **⚠️注意：demo只作为参考，如需使用，请熟悉代码，自行修改～**
 
