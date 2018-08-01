@@ -15,3 +15,9 @@
 ![Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.16](/Users/chikang/Desktop/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.16.png)
 
 ![Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.27.37](/Users/chikang/Desktop/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.27.37.png)
+
+
+
+**⚠️注意：demo只作为参考，如需使用，请熟悉代码，自行修改～**
+
+QQ：564826150
