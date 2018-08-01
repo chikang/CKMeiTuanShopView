@@ -714,7 +714,7 @@
     _sousuoLab.textColor = [kColor_GrayColor colorWithAlphaComponent:0];
     
     //搜索 信息  收藏 更多
-    NSArray *imgAray = @[@"sousuo_white",@"collect_white",@"message_white"];
+    NSArray *imgAray = @[@"sousuo_white",@"collect_white",@"more_white"];
     for (int i = 0; i<3; i++) {
         UIButton *itemBT  = [UIButton buttonWithType:UIButtonTypeCustom];
         itemBT.frame = CGRectMake(self.width-37*(3-i)-5, 20+kDefaultNavBar_SubView_MinY+5, 37, 34);
@@ -854,11 +854,11 @@
     
     if (_alpha >= 0.5) {
         [_backBT   setImage:kImage_Name(@"back_grey")    forState:UIControlStateNormal];
-        [messageBT setImage:kImage_Name(@"message_grey") forState:UIControlStateNormal];
+        [messageBT setImage:kImage_Name(@"more_grey") forState:UIControlStateNormal];
         [collectBT setImage:kImage_Name(@"collect_grey") forState:UIControlStateNormal];
     }else{
         [_backBT   setImage:kImage_Name(@"icon_back_white") forState:UIControlStateNormal];
-        [messageBT setImage:kImage_Name(@"message_white")   forState:UIControlStateNormal];
+        [messageBT setImage:kImage_Name(@"more_white")   forState:UIControlStateNormal];
         [collectBT setImage:kImage_Name(@"collect_white")   forState:UIControlStateNormal];
     }
     if (_isCollect) {
@@ -898,7 +898,7 @@
         _sousuoView.backgroundColor = [UIColorFromRGB(0xF4F4F4) colorWithAlphaComponent:0];
         _sousuoView.mj_w =  37;
         [sousuBT   setImage:kImage_Name(@"sousuo_white") forState:UIControlStateNormal];
-        [messageBT setImage:kImage_Name(@"message_white")   forState:UIControlStateNormal];
+        [messageBT setImage:kImage_Name(@"more_white")   forState:UIControlStateNormal];
         [collectBT setImage:kImage_Name(@"collect_white")   forState:UIControlStateNormal];
         if (_isCollect) {
             //已经收藏
