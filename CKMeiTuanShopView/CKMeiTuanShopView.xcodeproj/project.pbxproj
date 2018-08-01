@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C70FB782111C07E001DB333 /* pizza.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C70FB772111C07E001DB333 /* pizza.json */; };
 		5CAE1232210FF6CD003EAC76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE1231210FF6CD003EAC76 /* AppDelegate.m */; };
 		5CAE124A210FF6D1003EAC76 /* CKMeiTuanShopViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE1249210FF6D1003EAC76 /* CKMeiTuanShopViewTests.m */; };
 		5CAE1255210FF6D1003EAC76 /* CKMeiTuanShopViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE1254210FF6D1003EAC76 /* CKMeiTuanShopViewUITests.m */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		02B270344967263C29ABD8F0 /* Pods-CKMeiTuanShopView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKMeiTuanShopView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CKMeiTuanShopView/Pods-CKMeiTuanShopView.release.xcconfig"; sourceTree = "<group>"; };
+		5C70FB772111C07E001DB333 /* pizza.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pizza.json; sourceTree = "<group>"; };
 		5CAE122D210FF6CD003EAC76 /* CKMeiTuanShopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKMeiTuanShopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAE1230210FF6CD003EAC76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CAE1231210FF6CD003EAC76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 			children = (
 				5CAE13A6211166A2003EAC76 /* food.png */,
 				5CAE13A4211056F4003EAC76 /* shop.json */,
+				5C70FB772111C07E001DB333 /* pizza.json */,
 				5CAE132E210FFDC1003EAC76 /* CKPrefixHeader.pch */,
 				5CAE132F210FFDC1003EAC76 /* Assets.xcassets */,
 				5CAE1330210FFDC1003EAC76 /* LaunchScreen.storyboard */,
@@ -556,6 +559,7 @@
 				5CAE1335210FFDC1003EAC76 /* Assets.xcassets in Resources */,
 				5CAE1337210FFDC1003EAC76 /* Main.storyboard in Resources */,
 				5CAE13542110007B003EAC76 /* CustomTestCell.xib in Resources */,
+				5C70FB782111C07E001DB333 /* pizza.json in Resources */,
 				5CAE1336210FFDC1003EAC76 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

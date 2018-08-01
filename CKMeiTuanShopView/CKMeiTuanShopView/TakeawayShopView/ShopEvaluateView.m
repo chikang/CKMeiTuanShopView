@@ -9,7 +9,8 @@
 #import "ReserveEvluateCell.h"
 #import "EvaluateModel.h"
 #import "NewShopListModel.h"
-@interface ShopEvaluateView()<UITableViewDelegate,UITableViewDataSource>
+#import "SDPhotoBrowser.h"
+@interface ShopEvaluateView()<UITableViewDelegate,UITableViewDataSource,ReserveEvluateCellDelegate,SDPhotoBrowserDelegate>
 {
     NSInteger _evluateLastIndex;
     NSInteger _evaluateType;
@@ -23,6 +24,7 @@
     BOOL  _gestureEnd;//手势是否已经结束
     BOOL _isMoreThan;
     UILabel *_noDateLab;
+    NSInteger _selectedIndex;//被选中图片所在的cell索引
 }
 @property (nonatomic , strong) UIView *evluateItemView;
 
@@ -170,6 +172,7 @@
         cell.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10);
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.cellType = 1;
+        cell.delegate = self;
     }
     EvaluateModel *model = _dataArray[indexPath.row];
     [model calculateReserveCellHeight];
@@ -254,33 +257,8 @@
 //获取服务店铺评论列表
 - (void)requestGetNewShopCommList
 {
-//    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-//    [params setValue:@"" forKey:@"appId"];
-//    [params setValue:_groupId forKey:@"groupId"];
-//    [params setValue:[NSString stringWithFormat:@"%ld",_currPage] forKey:@"currPage"];//当前页数
-//    [params setValue:@"15" forKey:@"pageSize"];//每页显示最大数量
-//    [params setValue:[NSString stringWithFormat:@"%ld",_evaluateType] forKey:@"type"];//评价类型:0.全部1-推荐，2-一般，3-待改善
-//    [[APNetworkingManager sharedManager] wsPOST:DynamicProductURL
-//                                     methodName:@"getNewShopCommList"
-//                                     parameters:params
-//                                        success:^(NSDictionary *dictionary) {
-//                                            [_loadView stopAnimating];
-//                                            BOOL retFlag = [[dictionary objectForKey:@"retFlag"] boolValue];
-//                                            if (retFlag) {
-//                                                //解析数据
-//                                                if (!dictionary) {
-//                                                    return ;
-//                                                }
-//                                                [self analysisData:dictionary];
-//                                            }else{
-//                                                //请求失败原因
-//
-//                                            }
-//
-//                                        }failure:^(NSError *error) {
-//                                            [_loadView stopAnimating];
-//
-//                                        }];
+    NSDictionary *dataDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pizza.json" ofType:nil]];
+    [self analysisData:dataDict];
 }
 
 - (void)analysisData:(NSDictionary *)dic
@@ -310,6 +288,38 @@
     if (_dataArray.count == 0) {
         _noDateLab.hidden = YES;
     }
+}
+
+#pragma mark -- ReserveEvluateCellDelegate 评价列表代理方法
+- (void)didSelectedPhotoView:(ReserveEvluateCell *)cell withImgIndex:(NSInteger)index
+{
+    NSIndexPath *indexPath = [_tableView indexPathForCell:cell];
+    _selectedIndex = indexPath.row;
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:index];
+    //展示图片浏览器 （Cell 模式）
+    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
+    EvaluateModel *model = _dataArray[_selectedIndex];
+    NSArray *picList = model.picList;
+    browser.sourceImagesContainerView = cell.photoView;
+    browser.imageCount = picList.count;
+    browser.currentImageIndex = index - 1;
+    browser.delegate = self;
+    [browser show];
+}
+
+#pragma mark - SDPhotoBrowserDelegate 图片浏览器
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index { //图片的高清图片地址
+    EvaluateModel *model = _dataArray[_selectedIndex];
+    NSArray *picList = model.picList;
+    
+    NSURL *url = [NSURL URLWithString:picList[index][@"picUrl"]];
+    return url;
+}
+
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index { //返回占位图片
+    EvaluateModel *model = _dataArray[_selectedIndex];
+    NSArray *picList = model.picList;
+    return [[SDImageCache sharedImageCache] imageFromMemoryCacheForKey:picList[index][@"picUrl"]];
 }
 
 @end

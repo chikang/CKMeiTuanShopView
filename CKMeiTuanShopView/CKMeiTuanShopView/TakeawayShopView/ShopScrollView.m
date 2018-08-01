@@ -138,12 +138,12 @@ static CGFloat rubberBandDistance(CGFloat offset, CGFloat dimension) {
     [productBT setBackgroundImage:[AppMethods createImageWithColor:[UIColor whiteColor]] forState:UIControlStateHighlighted];
     [menuView addSubview:productBT];
     //评价
-    UIButton *evaluateBT = [UITool createButtonWithFrame:CGRectMake(button_W, 0, button_W, menuView.height) title:[NSString stringWithFormat:@"评价(%@)",@"0"] backgroundColor:[UIColor whiteColor] titleColor:kColor_TitleColor target:self selector:@selector(btnClick:) tag:2];
+    UIButton *evaluateBT = [UITool createButtonWithFrame:CGRectMake(button_W, 0, button_W, menuView.height) title:[NSString stringWithFormat:@"评价(%@)",@"6"] backgroundColor:[UIColor whiteColor] titleColor:kColor_TitleColor target:self selector:@selector(btnClick:) tag:2];
     evaluateBT.titleLabel.font = kFont(14);
     [evaluateBT setBackgroundImage:[AppMethods createImageWithColor:[UIColor whiteColor]] forState:UIControlStateHighlighted];
     [menuView addSubview:evaluateBT];
     _evaluateBT = evaluateBT;
-    [_evaluateBT setTitle:[NSString stringWithFormat:@"评价(%@)",[_shopModel.commCount integerValue] >999?@"999+":_shopModel.commCount] forState:UIControlStateNormal] ;
+//    [_evaluateBT setTitle:[NSString stringWithFormat:@"评价(%@)",[_shopModel.commCount integerValue] >999?@"999+":_shopModel.commCount] forState:UIControlStateNormal] ;
     //商家
     UIButton *merchantBT = [UITool createButtonWithFrame:CGRectMake(button_W*2, 0, button_W, menuView.height) title:@"商家" backgroundColor:[UIColor whiteColor] titleColor:kColor_TitleColor target:self selector:@selector(btnClick:) tag:3];
     merchantBT.titleLabel.font = kFont(14);
