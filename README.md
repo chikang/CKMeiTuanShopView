@@ -8,13 +8,13 @@
 
 
 
-![图片2](/Users/chikang/Desktop/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.23.png)
+![图片2](/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.23.png)
 
-![图片3](/Users/chikang/Desktop/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.19.png)
+![图片3](/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.19.png)
 
-![图片4](/Users/chikang/Desktop/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.16.png)
+![图片4](/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.32.16.png)
 
-![图片5](/Users/chikang/Desktop/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.27.37.png)
+![图片5](/CKMeiTuanShopView2/Simulator Screen Shot - iPhone 7 - 2018-08-01 at 09.27.37.png)
 
 
 
