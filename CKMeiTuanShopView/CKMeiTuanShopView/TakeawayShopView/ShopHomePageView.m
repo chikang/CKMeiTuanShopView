@@ -388,7 +388,6 @@
 //         [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row] atScrollPosition:UITableViewScrollPositionTop animated:YES];
           //collectionCellH  计算偏移量
           CGFloat offsetY = 0;
-          NSLog(@"--------%f",collectionCellH);
           for (int i = 0; i<indexPath.row; i++) {
               NSInteger count = 10;//动态返回数量
               offsetY = (count/2+count%2)*collectionCellH + 74 + offsetY;
@@ -401,7 +400,6 @@
         
         _leftIndex = indexPath.row;
     }else{
-        UIViewController *superVC =   [self viewController];
         DMLog(@"--跳转到详情。。。");
     }
 }
@@ -423,6 +421,7 @@
             array = _rightTabView.indexPathsForVisibleRows;
         }
         if (array.count > 0) {
+            //1:找到indexPath
             NSIndexPath *indexPath = array[0];
             //2:可见的第一个section位置
             NSInteger section = indexPath.section;

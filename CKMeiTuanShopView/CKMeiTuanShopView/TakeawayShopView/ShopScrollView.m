@@ -233,7 +233,7 @@ static CGFloat rubberBandDistance(CGFloat offset, CGFloat dimension) {
     self.subTableView = [self currentSubTableView];
 }
 
-#pragma mark 手势
+#pragma mark 手势,是否支持多个手手势共存
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
         UIPanGestureRecognizer *recognizer = (UIPanGestureRecognizer *)gestureRecognizer;
