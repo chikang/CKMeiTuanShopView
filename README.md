@@ -4,6 +4,10 @@
 
 解决UIScollView嵌套UIScollView、UITableview或者UIcollectionView的问题，结合手势和仿动力学UIKit Dynamic实现自定义scollView效果。
 
+![meituan](/image/meituan.gif)
+
+高仿美团外卖GIF
+
 1：手势问题，可参考👆的文章，解释的很详细，包括手势问题，以及如何实现自定义scrollView效果，模拟scrollView的回弹速度，阻尼效果等等.
 
 2：tableview和collectionView都继承与scrollview，根据手势上下滚动以及计算父视图scrollview向上滑动到导航条无缝对接需要的偏移量_maxOffset_Y，来判断是父视图scrollview在进行偏移，还是子视图scrollview在进行偏移，从而设置scrollview.contentOffset.
