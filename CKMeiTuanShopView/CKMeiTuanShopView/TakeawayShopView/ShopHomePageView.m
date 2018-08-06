@@ -388,6 +388,7 @@
 //         [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:indexPath.row] atScrollPosition:UITableViewScrollPositionTop animated:YES];
           //collectionCellH  计算偏移量
           CGFloat offsetY = 0;
+
           for (int i = 0; i<indexPath.row; i++) {
               NSInteger count = 10;//动态返回数量
               offsetY = (count/2+count%2)*collectionCellH + 74 + offsetY;
