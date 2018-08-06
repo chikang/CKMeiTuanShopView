@@ -21,12 +21,12 @@
 {
     BOOL _isStopAnimation;//是否禁止动画执行
     CGFloat _alpha;//导航条透明度
-    UIColor *styleColor;
-    UIButton *_backBT;
-    UIView *_sousuoView;
-    UILabel *_sousuoLab;
+    UIColor *styleColor;//导航条主题色
+    UIButton *_backBT;//返回按钮
+    UIView *_searchView;//搜索视图
+    UILabel *_searchLab;//搜索文本
     NewShopModel *_shopModel;//数据模型
-    NSInteger _maxOffset_Y;
+    NSInteger _maxOffset_Y;//从初始位置滑到顶部与导航条无缝对接，需要的最大距离
     CGFloat _startChange_Y;//开始改变的偏移量
     BOOL _isCollect;//是否已经收藏
     NSInteger _IMG_HEIGHT;//封面的高度
@@ -49,7 +49,6 @@
     if (self) {
         // 隐藏状态栏
         _IMG_HEIGHT = Size(150);
-        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
         self.backgroundColor = [UIColor whiteColor];
         [self setupViews];
@@ -518,24 +517,11 @@
     yuQiLab.frame = CGRectMake(gradeLab.maxX+5, 4, yuQiSize.width+5, 14);
     
     [cerView addSubview:yuQiLab];
-    
-//    if ([_shopModel.commScore floatValue] == 0) {
-//        gradeLab.hidden = YES;
-//        yuQiLab.hidden = YES;
-//        //暂无评论
-//        UILabel *noCommentLab = [UITool createLabelWithTextColor:UIColorFromRGB(0xFFCD20) textSize:12 alignment:NSTextAlignmentLeft];
-//        noCommentLab.text = @"暂无评论";
-//        CGSize size = [AppMethods sizeWithFont:kFont(12) Str:@"暂无评论" withMaxWidth:150];
-//        noCommentLab.frame = CGRectMake(max_X, 0, size.width, 25);
-//        [cerView addSubview:noCommentLab];
-//
-//        cerView.mj_w = noCommentLab.maxX;
-//    }
+
     
     //月售
     UILabel *line = [UITool lineLabWithFrame:CGRectMake(yuQiLab.maxX+8, 1, 2, 16)];
     line.backgroundColor = UIColorFromRGB(0xF4F4F4);
-//    line.alpha = 0.6;
     [cerView addSubview:line];
     
     UILabel *sellCountLab = [UITool createLabelWithTextColor:kColor_ButonCornerColor textSize:12 alignment:NSTextAlignmentLeft];
@@ -700,18 +686,18 @@
     _backBT = backBT;
     
     //搜索框
-    UIView *sousuoView = [[UIView alloc]initWithFrame:CGRectMake(self.width-37*4-10, 20+kDefaultNavBar_SubView_MinY+ 5 + 5, 37, 24)];
-    sousuoView.backgroundColor =[UIColorFromRGB(0xF4F4F4) colorWithAlphaComponent:0.0];
-    [navBarView addSubview:sousuoView];
-    _sousuoView = sousuoView;
+    UIView *searchView = [[UIView alloc]initWithFrame:CGRectMake(self.width-37*4-10, 20+kDefaultNavBar_SubView_MinY+ 5 + 5, 37, 24)];
+    searchView.backgroundColor =[UIColorFromRGB(0xF4F4F4) colorWithAlphaComponent:0.0];
+    [navBarView addSubview:searchView];
+    _searchView = searchView;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(searchClick:)];
-    [_sousuoView addGestureRecognizer:tap];
+    [searchView addGestureRecognizer:tap];
     
-    _sousuoLab = [UITool createLabelWithFrame:CGRectMake(30, 2, 120, 20) backgroundColor:[UIColor clearColor] textColor:kColor_GrayColor textSize:Size(12) alignment:NSTextAlignmentLeft lines:1];
-    _sousuoLab.text = @"请输入商品名称";
-    [sousuoView addSubview:_sousuoLab];
-    _sousuoLab.textColor = [kColor_GrayColor colorWithAlphaComponent:0];
+    _searchLab = [UITool createLabelWithFrame:CGRectMake(30, 2, 120, 20) backgroundColor:[UIColor clearColor] textColor:kColor_GrayColor textSize:Size(12) alignment:NSTextAlignmentLeft lines:1];
+    _searchLab.text = @"请输入商品名称";
+    [_searchView addSubview:_searchLab];
+    _searchLab.textColor = [kColor_GrayColor colorWithAlphaComponent:0];
     
     //搜索 信息  收藏 更多
     NSArray *imgAray = @[@"sousuo_white",@"collect_white",@"more_white"];
@@ -828,29 +814,29 @@
                 [sousuBT setImage:kImage_Name(@"sousuo_white") forState:UIControlStateNormal];
             }
             sousuBT.imageEdgeInsets = UIEdgeInsetsMake(8*imgRate2, 8*imgRate2, 8*imgRate2, 8*imgRate2);
-            _sousuoView.mj_x = sousuBT.mj_x;
-            _sousuoLab.mj_x = 30;
-            _sousuoView.backgroundColor = [UIColorFromRGB(0xF4F4F4) colorWithAlphaComponent:alpha2];
+            _searchView.mj_x = sousuBT.mj_x;
+            _searchLab.mj_x = 30;
+            _searchView.backgroundColor = [UIColorFromRGB(0xF4F4F4) colorWithAlphaComponent:alpha2];
             if (_alpha >= 0.8) {
-                _sousuoLab.textColor = [kColor_GrayColor colorWithAlphaComponent:_alpha];
+                _searchLab.textColor = [kColor_GrayColor colorWithAlphaComponent:_alpha];
             }else{
-                _sousuoLab.textColor = [kColor_GrayColor colorWithAlphaComponent:0];
+                _searchLab.textColor = [kColor_GrayColor colorWithAlphaComponent:0];
             }
             CGFloat sousuoBgRate = (offsetY - _startChange_Y)/(_maxOffset_Y- _startChange_Y);
             if (sousuoBgRate >= 1) {
                 sousuoBgRate = 1;
             }
-            _sousuoView.mj_w = distance*sousuoBgRate + 37;
+            _searchView.mj_w = distance*sousuoBgRate + 37;
         }
     }else{
         sousuBT.frame = CGRectMake(startLoc, 20+kDefaultNavBar_SubView_MinY+5, 37, 34);
         [sousuBT setImage:kImage_Name(@"sousuo_white") forState:UIControlStateNormal];
         sousuBT.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-        _sousuoView.backgroundColor = [UIColorFromRGB(0xF4F4F4) colorWithAlphaComponent:0];
-        _sousuoView.mj_x = sousuBT.mj_x;
-        _sousuoView.mj_w =  37;
-        _sousuoLab.mj_x = 30;
-        _sousuoLab.textColor = [kColor_GrayColor colorWithAlphaComponent:0];
+        _searchView.backgroundColor = [UIColorFromRGB(0xF4F4F4) colorWithAlphaComponent:0];
+        _searchView.mj_x = sousuBT.mj_x;
+        _searchView.mj_w =  37;
+        _searchLab.mj_x = 30;
+        _searchLab.textColor = [kColor_GrayColor colorWithAlphaComponent:0];
     }
     
     if (_alpha >= 0.5) {
@@ -884,22 +870,22 @@
 {
     UIButton *sousuBT = (UIButton *)[_navBarView viewWithTag:1];
      UIButton *collectBT = (UIButton *)[_navBarView viewWithTag:2];
-    UIButton *messageBT = (UIButton *)[_navBarView viewWithTag:3];
+    UIButton *moreBT = (UIButton *)[_navBarView viewWithTag:3];
     CGFloat startLoc = self.width-37*3-5;
     [UIView animateWithDuration:0.1 animations:^{
-        _sousuoLab.textColor = [kColor_GrayColor colorWithAlphaComponent:0];
+        _searchLab.textColor = [kColor_GrayColor colorWithAlphaComponent:0];
     }];
     
     [UIView animateWithDuration:0.3 animations:^{
         self.navBarView.backgroundColor = [styleColor  colorWithAlphaComponent:0];
         sousuBT.frame = CGRectMake(startLoc, 20+kDefaultNavBar_SubView_MinY+5, 37, 34);
         sousuBT.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-        _sousuoView.mj_x = sousuBT.mj_x;
-        _sousuoLab.mj_x = 30;
-        _sousuoView.backgroundColor = [UIColorFromRGB(0xF4F4F4) colorWithAlphaComponent:0];
-        _sousuoView.mj_w =  37;
+        _searchView.mj_x = sousuBT.mj_x;
+        _searchLab.mj_x = 30;
+        _searchView.backgroundColor = [UIColorFromRGB(0xF4F4F4) colorWithAlphaComponent:0];
+        _searchView.mj_w =  37;
         [sousuBT   setImage:kImage_Name(@"sousuo_white") forState:UIControlStateNormal];
-        [messageBT setImage:kImage_Name(@"more_white")   forState:UIControlStateNormal];
+        [moreBT setImage:kImage_Name(@"more_white")   forState:UIControlStateNormal];
         [collectBT setImage:kImage_Name(@"collect_white")   forState:UIControlStateNormal];
         if (_isCollect) {
             //已经收藏
@@ -946,7 +932,7 @@
     [self addSubview:self.productListView];
 }
 
-#pragma mark 手势
+#pragma mark 手势 多个手势共存
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
 }

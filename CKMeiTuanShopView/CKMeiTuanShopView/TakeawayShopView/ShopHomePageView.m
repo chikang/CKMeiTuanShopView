@@ -390,7 +390,7 @@
           CGFloat offsetY = 0;
           NSLog(@"--------%f",collectionCellH);
           for (int i = 0; i<indexPath.row; i++) {
-              NSInteger count = _productList.count;
+              NSInteger count = 10;//动态返回数量
               offsetY = (count/2+count%2)*collectionCellH + 74 + offsetY;
           }
           [_collectionView setContentOffset:CGPointMake(0, offsetY) animated:YES];

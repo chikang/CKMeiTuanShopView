@@ -19,7 +19,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     TakeawayShopMainVC *takeawayVC = [[TakeawayShopMainVC alloc]init];
-    takeawayVC.GroupID = @"12519";
     self.window.rootViewController = takeawayVC;
     return YES;
 }

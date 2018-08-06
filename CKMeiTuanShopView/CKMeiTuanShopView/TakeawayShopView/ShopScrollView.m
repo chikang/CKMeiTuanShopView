@@ -79,6 +79,15 @@ static CGFloat rubberBandDistance(CGFloat offset, CGFloat dimension) {
         //创建上下滑动的scrollview
         [self addSubview:self.subScrollView];
 #warning mark - 在这里暂时改变商家主页样式
+        /*
+         
+         typedef NS_ENUM(NSInteger, ShopModuleType) {
+         ShopModuleTypeList = 1,   //样式一 列表布局
+         ShopModuleTypeGongGe  = 2,  //样式二 宫格布局
+         ShopModuleTypeCard        //样式三 卡片布局
+         };
+
+         */
         self.shopViewType = 2;//
         [self.subScrollView addSubview:self.shopHomePageView];//店铺主页
         [self.subScrollView addSubview:self.shopEvaluateView];//评价
@@ -234,6 +243,7 @@ static CGFloat rubberBandDistance(CGFloat offset, CGFloat dimension) {
             isVertical = NO;
             return YES;
         } else {
+            ////判断如果currentX为currentY的5倍及以上就是断定为横向滑动，返回YES，否则返货NO
             if (fabs(currentX)/fabs(currentY) >= 5.0) {
                 isVertical = NO;
                 return YES;
@@ -373,7 +383,7 @@ static CGFloat rubberBandDistance(CGFloat offset, CGFloat dimension) {
             self.dynamicItem.center = self.subTableView.contentOffset;
             
             target = CGPointMake(self.subTableView.contentOffset.x, (self.subTableView.contentSize.height - self.subTableView.frame.size.height));
-            //********池康--判断tableview的contentsize.height是否大于自身高度，从而控制滚动/
+            //********判断tableview的contentsize.height是否大于自身高度，从而控制滚动/
             if (self.subTableView.contentSize.height <= self.subTableView.frame.size.height) {
                 target = CGPointMake(self.subTableView.contentOffset.x,0);
             }

@@ -42,6 +42,7 @@
 //加载子视图
 - (void)initSubView
 {
+    //在请求中携带店铺ID
     TakeawayShopView *shopView = [[TakeawayShopView alloc]initWithFrame:self.view.bounds withGroupID:_GroupID];
     [self.view addSubview:shopView];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
