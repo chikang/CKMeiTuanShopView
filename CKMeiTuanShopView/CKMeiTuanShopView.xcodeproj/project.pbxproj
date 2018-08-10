@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C25E5E6211D269B004E31DD /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C25E5E5211D269B004E31DD /* FXBlurView.m */; };
 		5C70FB782111C07E001DB333 /* pizza.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C70FB772111C07E001DB333 /* pizza.json */; };
 		5CAE1232210FF6CD003EAC76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE1231210FF6CD003EAC76 /* AppDelegate.m */; };
 		5CAE124A210FF6D1003EAC76 /* CKMeiTuanShopViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE1249210FF6D1003EAC76 /* CKMeiTuanShopViewTests.m */; };
@@ -26,7 +27,6 @@
 		5CAE1338210FFDC1003EAC76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE1334210FFDC1003EAC76 /* main.m */; };
 		5CAE133B210FFEF9003EAC76 /* ReserveEvluateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE1339210FFEF9003EAC76 /* ReserveEvluateCell.m */; };
 		5CAE133F210FFFCA003EAC76 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE133E210FFFCA003EAC76 /* UIView+Helper.m */; };
-		5CAE134421100017003EAC76 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE134321100017003EAC76 /* FXBlurView.m */; };
 		5CAE13512110007B003EAC76 /* YBRectConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE13492110007B003EAC76 /* YBRectConst.m */; };
 		5CAE13522110007B003EAC76 /* YBPopupMenuPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE134B2110007B003EAC76 /* YBPopupMenuPath.m */; };
 		5CAE13532110007B003EAC76 /* CustomTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE134C2110007B003EAC76 /* CustomTestCell.m */; };
@@ -76,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		02B270344967263C29ABD8F0 /* Pods-CKMeiTuanShopView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKMeiTuanShopView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CKMeiTuanShopView/Pods-CKMeiTuanShopView.release.xcconfig"; sourceTree = "<group>"; };
+		5C25E5E4211D269B004E31DD /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		5C25E5E5211D269B004E31DD /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		5C70FB772111C07E001DB333 /* pizza.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pizza.json; sourceTree = "<group>"; };
 		5CAE122D210FF6CD003EAC76 /* CKMeiTuanShopView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKMeiTuanShopView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAE1230210FF6CD003EAC76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,8 +116,6 @@
 		5CAE133A210FFEF9003EAC76 /* ReserveEvluateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReserveEvluateCell.h; sourceTree = "<group>"; };
 		5CAE133D210FFFCA003EAC76 /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helper.h"; sourceTree = "<group>"; };
 		5CAE133E210FFFCA003EAC76 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
-		5CAE134221100017003EAC76 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
-		5CAE134321100017003EAC76 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		5CAE134621100049003EAC76 /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
 		5CAE13482110007B003EAC76 /* YBPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPopupMenu.h; sourceTree = "<group>"; };
 		5CAE13492110007B003EAC76 /* YBRectConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBRectConst.m; sourceTree = "<group>"; };
@@ -201,6 +201,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C25E5E3211D269B004E31DD /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				5C25E5E4211D269B004E31DD /* FXBlurView.h */,
+				5C25E5E5211D269B004E31DD /* FXBlurView.m */,
+			);
+			name = FXBlurView;
+			path = "../../../../../Downloads/FXBlurView-master/FXBlurView";
+			sourceTree = "<group>";
+		};
 		5CAE1224210FF6CD003EAC76 = {
 			isa = PBXGroup;
 			children = (
@@ -346,20 +356,11 @@
 		5CAE134021100009003EAC76 /* ThridParty */ = {
 			isa = PBXGroup;
 			children = (
+				5C25E5E3211D269B004E31DD /* FXBlurView */,
 				5CAE135A21100333003EAC76 /* SDPhotoBrowser */,
 				5CAE13472110007B003EAC76 /* YBPopupMenu */,
-				5CAE134121100017003EAC76 /* FXBlurView */,
 			);
 			path = ThridParty;
-			sourceTree = "<group>";
-		};
-		5CAE134121100017003EAC76 /* FXBlurView */ = {
-			isa = PBXGroup;
-			children = (
-				5CAE134221100017003EAC76 /* FXBlurView.h */,
-				5CAE134321100017003EAC76 /* FXBlurView.m */,
-			);
-			path = FXBlurView;
 			sourceTree = "<group>";
 		};
 		5CAE134521100040003EAC76 /* Define */ = {
@@ -645,9 +646,9 @@
 				5CAE133F210FFFCA003EAC76 /* UIView+Helper.m in Sources */,
 				5CAE138821100AEB003EAC76 /* AppDefaultUtil.m in Sources */,
 				5CAE136321100333003EAC76 /* SDWaitingView.m in Sources */,
-				5CAE134421100017003EAC76 /* FXBlurView.m in Sources */,
 				5CAE132C210FFD84003EAC76 /* TakeawayShopView.m in Sources */,
 				5CAE13A021101197003EAC76 /* NSDate+Utilities.m in Sources */,
+				5C25E5E6211D269B004E31DD /* FXBlurView.m in Sources */,
 				5CAE13532110007B003EAC76 /* CustomTestCell.m in Sources */,
 				5CAE138521100ABE003EAC76 /* JHHeaderFlowLayout.m in Sources */,
 				5CAE133B210FFEF9003EAC76 /* ReserveEvluateCell.m in Sources */,
