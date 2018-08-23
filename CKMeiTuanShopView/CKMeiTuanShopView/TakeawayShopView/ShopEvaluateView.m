@@ -12,19 +12,20 @@
 #import "SDPhotoBrowser.h"
 @interface ShopEvaluateView()<UITableViewDelegate,UITableViewDataSource,ReserveEvluateCellDelegate,SDPhotoBrowserDelegate>
 {
-    NSInteger _evluateLastIndex;
-    NSInteger _evaluateType;
+    NSInteger _evluateLastIndex;//上次点击的索引值
+    NSInteger _evaluateType;//评价类型，推荐，一般，不满意
     NSInteger       _currPage;//页数索引
-    NSInteger _count;
-    NSMutableArray *_dataArray;
+    NSInteger _count;//总共多少条数据
+    NSMutableArray *_dataArray;//数据源数组
+    NSInteger _selectedIndex;//被选中图片所在的cell索引
     
     ///上拉加载相关-----
-    UIActivityIndicatorView *_loadView;
+    UIActivityIndicatorView *_loadView;//菊花
     BOOL _isLoading;//是否正在加载
     BOOL  _gestureEnd;//手势是否已经结束
     BOOL _isMoreThan;
-    UILabel *_noDateLab;
-    NSInteger _selectedIndex;//被选中图片所在的cell索引
+    UILabel *_noDateLab;//无数据提示
+    
 }
 @property (nonatomic , strong) UIView *evluateItemView;
 
