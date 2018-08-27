@@ -88,7 +88,7 @@ static CGFloat rubberBandDistance(CGFloat offset, CGFloat dimension) {
          };
 
          */
-        self.shopViewType = 2;//
+        self.shopViewType = 1;//
         [self.subScrollView addSubview:self.shopHomePageView];//店铺主页
         [self.subScrollView addSubview:self.shopEvaluateView];//评价
         [self.subScrollView addSubview:self.merchantView];//商家
