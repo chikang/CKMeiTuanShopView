@@ -174,6 +174,9 @@ static CGFloat rubberBandDistance(CGFloat offset, CGFloat dimension) {
 {
     //委托 方法
     if (scrollView == self) {
+        if (self.contentOffset.y == 0) {//如果已经回到顶部了，则移除手势，禁止来回谈动
+            [self.animator removeAllBehaviors];
+        }
         if (!_isStopAnimation) {
             if ([self.scrollDelegate respondsToSelector:@selector(ListScrollViewDidScroll:)]) {
                 [self.scrollDelegate ListScrollViewDidScroll:scrollView];
